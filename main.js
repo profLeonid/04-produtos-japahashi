@@ -8,6 +8,7 @@ function adicionarProduto(){
     const spanQuantidade = document.createElement('span')
     const codigo = document.getElementById('codigo')
     const quantidade = document.getElementById('quantidade')
+    const campoDiv = document.createElement('div')
    
     
     if(produto.value == "" || codigo.value == "" || quantidade.value == ""){
@@ -22,10 +23,15 @@ function adicionarProduto(){
         spanProduto.className = 'bg-blue-200 px-8 py-2'
         spanCodigo.className = 'bg-blue-200 px-8 py-2'
         spanQuantidade.className = 'bg-blue-200 px-8 py-2'
+        campoDiv.className = "flex gap-2"
 
-        lista.appendChild(spanProduto)
-        lista.appendChild(spanCodigo)
-        lista.appendChild(spanQuantidade)
+        
+        campoDiv.appendChild(spanProduto)
+        campoDiv.appendChild(spanCodigo)
+        campoDiv.appendChild(spanQuantidade)
+        
+
+        lista.appendChild(campoDiv)
 
         produto.value = ""
         codigo.value = ""
